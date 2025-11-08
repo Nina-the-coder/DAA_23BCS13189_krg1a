@@ -12,7 +12,6 @@ class DoublyLinkedList {
 public:
     DoublyLinkedList() { head = nullptr; }
 
-    // Insert at the beginning
     void insertAtBeginning(int value) {
         Node* newNode = new Node{value, nullptr, head};
         if (head != nullptr)
@@ -20,7 +19,6 @@ public:
         head = newNode;
     }
 
-    // Insert at the end
     void insertAtEnd(int value) {
         Node* newNode = new Node{value, nullptr, nullptr};
         if (head == nullptr) {
@@ -34,7 +32,6 @@ public:
         newNode->prev = temp;
     }
 
-    // Delete from beginning
     void deleteFromBeginning() {
         if (head == nullptr) {
             cout << "List is empty\n";
@@ -47,7 +44,6 @@ public:
         delete temp;
     }
 
-    // Delete from end
     void deleteFromEnd() {
         if (head == nullptr) {
             cout << "List is empty\n";
@@ -63,7 +59,6 @@ public:
         delete temp;
     }
 
-    // Display the list
     void display() {
         Node* temp = head;
         while (temp != nullptr) {

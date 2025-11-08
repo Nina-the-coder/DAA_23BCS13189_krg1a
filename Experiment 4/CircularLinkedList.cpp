@@ -11,7 +11,6 @@ class CircularLinkedList {
 public:
     CircularLinkedList() { head = nullptr; }
 
-    // Insert at beginning
     void insertAtBeginning(int value) {
         Node* newNode = new Node{value, nullptr};
         if (head == nullptr) {
@@ -27,7 +26,6 @@ public:
         }
     }
 
-    // Insert at end
     void insertAtEnd(int value) {
         Node* newNode = new Node{value, nullptr};
         if (head == nullptr) {
@@ -42,13 +40,12 @@ public:
         newNode->next = head;
     }
 
-    // Delete from beginning
     void deleteFromBeginning() {
         if (head == nullptr) {
             cout << "List is empty\n";
             return;
         }
-        if (head->next == head) { // single node
+        if (head->next == head) { 
             delete head;
             head = nullptr;
             return;
@@ -62,7 +59,6 @@ public:
         delete temp;
     }
 
-    // Delete from end
     void deleteFromEnd() {
         if (head == nullptr) {
             cout << "List is empty\n";
@@ -83,7 +79,6 @@ public:
         delete temp;
     }
 
-    // Display
     void display() {
         if (head == nullptr) {
             cout << "List is empty\n";
